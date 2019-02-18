@@ -1,0 +1,12 @@
+{
+	"name": "create-license",
+	"description": "Easily create license files.",
+	"version": "1.0",
+	"license": "MIT License",
+	"contributors": ["https://github.com/itsmaxymoo"],
+
+	"sourceDirectory": "create-license",
+	"entryFunction": "CreateLicense\\Program::Main",
+	"outputDirectory": "build",
+	"outputFile": "create-license"
+}
