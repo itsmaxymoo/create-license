@@ -44,9 +44,6 @@ class Program {
 	private static function create($licenseCode, $file): void {
 		if (self::$config['firstRun']) {
 			self::setName();
-			self::$config['firstRun'] = false;
-
-			self::configWrite();
 		}
 
 		$l = null;
@@ -77,6 +74,7 @@ class Program {
 	private static function setName(): void {
 		\PHPCanner::log('Please input the name to be used in license files.');
 		self::$config['name'] = readline('Name=');
+		self::$config['firstRun'] = false;
 
 		self::configWrite();
 	}
@@ -96,7 +94,7 @@ class Program {
 	}
 
 	private static function configRead(): bool {
-		$file = file_get_contents(self::$home . DIRECTORY_SEPARATOR . 'config.json');
+		$file = @file_get_contents(self::$home . DIRECTORY_SEPARATOR . 'config.json');
 
 		if ($file === false) {
 			return false;
