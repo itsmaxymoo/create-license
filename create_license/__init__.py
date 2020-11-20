@@ -9,11 +9,15 @@ PROGRAM_AUTHOR = "Max Loiacono"
 PROGRAM_URL = "https://github.com/itsmaxymoo/create-license"
 
 ENABLED_LICENSES = [
-	("mit", "MIT License")
+	("apache-2", "Apache License, version 2.0"),
+	("bsd-3", "BSD License 3.0 (\"New/Revised BSD License\")"),
+	("gpl-3", "GNU General Public License 3.0"),
+	("mit", "MIT License"),
+	("mpl-2", "Mozilla Public License, version 2.0")
 ]
 
 config = ""
-config_file_path = path.expanduser("~") + "/.create-license"
+config_file_path = path.expanduser("~") + "/.create_license"
 f = open(config_file_path, mode="a", encoding="utf-8")
 
 
@@ -82,10 +86,15 @@ def show_help():
 
 
 def list_licenses():
-	print("License\tDescription\n")
+	print("License\t\tDescription\n")
 
 	for l in ENABLED_LICENSES:
-		print(l[0] + "\t" + l[1])
+		tabs = "\t\t" if len(l[0]) < 8 else "\t"
+		print(l[0] + tabs + l[1])
+
+	print("\nNeed help deciding? See:")
+	print("https://opensource.org/licenses")
+	print("https://choosealicense.com/")
 
 
 def set_name():
@@ -95,5 +104,4 @@ def set_name():
 	f.write(name)
 
 
-if __name__ == "__main__":
-	main()
+main()
