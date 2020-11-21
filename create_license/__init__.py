@@ -11,9 +11,12 @@ PROGRAM_URL = "https://github.com/itsmaxymoo/create-license"
 ENABLED_LICENSES = [
 	("apache-2", "Apache License, version 2.0"),
 	("bsd-3", "BSD License 3.0 (\"New/Revised BSD License\")"),
+	("bsd-2", "BSD License 2.0 (\"Free BSD License\")"),
 	("gpl-3", "GNU General Public License 3.0"),
+	("lgpl-3", "GNU Lesser General Public License 3.0"),
 	("mit", "MIT License"),
-	("mpl-2", "Mozilla Public License, version 2.0")
+	("mpl-2", "Mozilla Public License, version 2.0"),
+	("none", "MIT-0 License (public domain analog)")
 ]
 
 config = ""
