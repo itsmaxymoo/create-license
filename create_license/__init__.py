@@ -4,7 +4,7 @@ import datetime
 import pkgutil
 
 PROGRAM_NAME = "create-license"
-PROGRAM_VERSION = "2.0"
+PROGRAM_VERSION = "2.0.3"
 PROGRAM_AUTHOR = "Max Loiacono"
 PROGRAM_URL = "https://github.com/itsmaxymoo/create-license"
 
@@ -48,6 +48,8 @@ def main():
 		create_license(sys.argv[1], sys.argv[2])
 	elif len(sys.argv) > 1:
 		create_license(sys.argv[1])
+
+	exit(0)
 
 
 def create_license(license_name, filename="LICENSE"):

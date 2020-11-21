@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
 	name='create-license',
-	version='2.0',
+	version='2.0.3',
 	packages=['create_license'],
 	url='https://github.com/itsmaxymoo/create-license',
 	license='MIT License',
@@ -16,6 +16,9 @@ setup(
 	long_description_content_type="text/markdown",
 	entry_points={
 		'console_scripts': ['create-license=create_license:main']
+	},
+	package_data={
+		'create_license': ['templates/*.txt']
 	},
 	classifiers=[
 		"Programming Language :: Python :: 3",
