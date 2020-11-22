@@ -4,7 +4,8 @@ import datetime
 import pkgutil
 
 PROGRAM_NAME = "create-license"
-PROGRAM_VERSION = "2.0.3"
+PROGRAM_CMD = "create-license"
+PROGRAM_VERSION = "2.0.4"
 PROGRAM_AUTHOR = "Max Loiacono"
 PROGRAM_URL = "https://github.com/itsmaxymoo/create-license"
 
@@ -69,7 +70,7 @@ def create_license(license_name, filename="LICENSE"):
 			license_file = open(filename, mode="x", encoding="utf-8")
 			license_file.write(license_text)
 
-			print("Created " + license_name.lower() + " license at " + filename)
+			print("Created \"" + license_name.lower() + "\" license at " + filename)
 		except:
 			print("ERROR: Could not create file: " + filename)
 	else:
@@ -79,9 +80,9 @@ def create_license(license_name, filename="LICENSE"):
 def show_help():
 	print(PROGRAM_NAME + " version " + PROGRAM_VERSION + " by " + PROGRAM_AUTHOR)
 	print("See at: " + PROGRAM_URL + "\n")
-	print("Usage:\t" + path.basename(__file__) + " [option]")
-	print("\t" + path.basename(__file__) + " [license]")
-	print("\t" + path.basename(__file__) + " [license] [file]")
+	print("Usage:\t" + PROGRAM_CMD + " [option]")
+	print("\t" + PROGRAM_CMD + " [license]")
+	print("\t" + PROGRAM_CMD + " [license] [file]")
 	print("Options:")
 	print("\thelp\t\t\tshow help text")
 	print("\tlist\t\t\tlist all licenses")
