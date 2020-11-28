@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
 	name='create-license',
-	version='2.0.4',
+	version='2.0.5',
 	packages=['create_license'],
 	url='https://github.com/itsmaxymoo/create-license',
 	license='MIT License',
