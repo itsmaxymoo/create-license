@@ -1,5 +1,6 @@
 Copyright (c) {{YEAR}} {{NAME}}
 
+Mozilla Public License Version 2.0
 ==================================
 
 1. Definitions

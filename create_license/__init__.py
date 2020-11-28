@@ -4,7 +4,7 @@ import datetime
 import pkgutil
 
 PROGRAM_NAME = "create-license"
-PROGRAM_VERSION = "2.0.3"
+PROGRAM_VERSION = "2.0.4"
 PROGRAM_AUTHOR = "Max Loiacono"
 PROGRAM_URL = "https://github.com/itsmaxymoo/create-license"
 
@@ -16,7 +16,7 @@ ENABLED_LICENSES = [
 	("lgpl-3", "GNU Lesser General Public License 3.0"),
 	("mit", "MIT License"),
 	("mpl-2", "Mozilla Public License, version 2.0"),
-	("none", "MIT-0 License (public domain analog)")
+	("none", "Public domain (+liability, warranty)")
 ]
 
 config = ""
@@ -99,7 +99,7 @@ def list_licenses():
 
 	print("\nNeed help deciding? See:")
 	print("https://opensource.org/licenses")
-	print("https://choosealicense.com/")
+	print("https://choosealicense.com/licenses")
 
 
 def set_name():
