@@ -1,15 +1,16 @@
 from setuptools import setup
+import create_license
 
 with open("README.md", "r") as fh:
 	long_description = fh.read()
 
 setup(
-	name='create-license',
-	version='2.0.6',
+	name=create_license.PROGRAM_NAME,
+	version=create_license.PROGRAM_VERSION,
 	packages=['create_license'],
-	url='https://github.com/itsmaxymoo/create-license',
+	url=create_license.PROGRAM_URL,
 	license='Mozilla Public License version 2.0',
-	author='Max Loiacono',
+	author=create_license.PROGRAM_AUTHOR,
 	author_email='',
 	description='Easily create license files.',
 	long_description=long_description,
