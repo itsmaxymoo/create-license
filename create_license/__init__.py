@@ -5,7 +5,7 @@ import simplecfg
 
 PROGRAM_NAME = "create-license"
 PROGRAM_CMD = "create-license"
-PROGRAM_VERSION = "2.0.8"
+PROGRAM_VERSION = "2.0.9"
 PROGRAM_AUTHOR = "Max Loiacono"
 PROGRAM_URL = "https://github.com/itsmaxymoo/create-license"
 
@@ -38,6 +38,8 @@ def _main():
 
 	if cli_opt in ["", "-h", "--help", "help"]:
 		_show_help()
+	elif cli_opt == "--version":
+		print(PROGRAM_VERSION)
 	elif cli_opt == "list":
 		_list_licenses()
 	elif cli_opt == "set-name":
