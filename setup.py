@@ -9,7 +9,7 @@ setup(
 	version=create_license.PROGRAM_VERSION,
 	packages=['create_license'],
 	url=create_license.PROGRAM_URL,
-	license='Mozilla Public License version 2.0',
+	license='Apache License version 2.0',
 	author=create_license.PROGRAM_AUTHOR,
 	author_email='',
 	description='Easily create license files.',
@@ -23,11 +23,11 @@ setup(
 	},
 	classifiers=[
 		"Programming Language :: Python :: 3",
-		"License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)",
+		"License :: OSI Approved :: Apache Software License",
 		"Operating System :: OS Independent",
 	],
 	install_requires=[
-		"simplecfg"
+		"simplecfg < 2.0"
 	],
 	python_requires='>=3.6'
 )
