@@ -9,7 +9,7 @@ setup(
 	version=create_license.PROGRAM_VERSION,
 	packages=['create_license'],
 	url=create_license.PROGRAM_URL,
-	license='Apache License version 2.0',
+	license='MIT License',
 	author=create_license.PROGRAM_AUTHOR,
 	author_email='',
 	description='Easily create license files.',
@@ -23,11 +23,11 @@ setup(
 	},
 	classifiers=[
 		"Programming Language :: Python :: 3",
-		"License :: OSI Approved :: Apache Software License",
+		"License :: OSI Approved :: MIT License",
 		"Operating System :: OS Independent",
 	],
 	install_requires=[
-		"simplecfg < 2.0"
+		"simplecfg < 3.0.0"
 	],
 	python_requires='>=3.6'
 )

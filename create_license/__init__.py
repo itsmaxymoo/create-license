@@ -1,11 +1,13 @@
 import sys
 import datetime
+import os.path
 import pkgutil
 import simplecfg
+import simplecfg.dir
 
 PROGRAM_NAME = "create-license"
 PROGRAM_CMD = "create-license"
-PROGRAM_VERSION = "2.0.10"
+PROGRAM_VERSION = "2.1.0"
 PROGRAM_AUTHOR = "Max Loiacono"
 PROGRAM_URL = "https://github.com/itsmaxymoo/create-license"
 
@@ -21,13 +23,14 @@ ENABLED_LICENSES = [
 	("closed", "Closed source license template")
 ]
 
-config = simplecfg.Config(simplecfg.dir.HOME, ".create_license")
+config = simplecfg.Config(os.path.join(simplecfg.dir.HOME, ".create_license"))
 
 
 def _main():
 	# Configuration file
 	global config
-	if len(config.get("name")) == 0:
+	config.read_file()
+	if config.get("name") == None or len(config.get("name")) == 0:
 		print("Please set the name to be automatically inserted into licenses.")
 		_set_name()
 
@@ -66,7 +69,7 @@ def _create_license(license_name, filename="LICENSE"):
 		license_text = license_text.replace("{{NAME}}", config.get("name"))
 
 		try:
-			license_file = open(filename, mode="x", encoding="utf-8")
+			license_file = open(filename, mode="w", encoding="utf-8")
 			license_file.write(license_text)
 
 			print("Created \"" + license_name.lower() + "\" license at " + filename)
@@ -106,3 +109,4 @@ def _set_name():
 	name = input("Your name: ")
 	print("Hi, " + name)
 	config.set("name", name)
+	config.write_file()
