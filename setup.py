@@ -27,7 +27,7 @@ setup(
 		"Operating System :: OS Independent",
 	],
 	install_requires=[
-		"simplecfg < 3.0.0"
+		"simplecfg >= 2.0.0, < 3.0.0"
 	],
 	python_requires='>=3.6'
 )
