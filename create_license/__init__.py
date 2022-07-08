@@ -7,7 +7,7 @@ import simplecfg.dir
 
 PROGRAM_NAME = "create-license"
 PROGRAM_CMD = "create-license"
-PROGRAM_VERSION = "2.1.0"
+PROGRAM_VERSION = "2.1.1"
 PROGRAM_AUTHOR = "Max Loiacono"
 PROGRAM_URL = "https://github.com/itsmaxymoo/create-license"
 
